@@ -1,0 +1,490 @@
+@import "./resets";
+@import "./variables";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+body {
+  background-color: $background-color;
+  line-height: 1.7rem;
+  align-self: center;
+}
+
+main {
+  background-color: $background-color;
+  width: 60%;
+  margin: auto;
+}
+
+@media screen and (max-width: 575px) {
+  main {
+    width: 80%;
+  }
+}
+
+nav {
+  background-color: $background-color;
+  font-family: $font-fam-3;
+  border-bottom: 2px solid $highlight;
+  width: 70%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1025px) {
+  nav {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+h2 {
+  color: $semi-highlight;
+  font-size: $font-size-xl;
+}
+
+p {
+  font-size: $font-size-s;
+  color: $semi-highlight;
+  font-family: $font-fam-3;
+}
+
+span {
+  color: $highlight;
+  font-weight: bold;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.nav-link,
+.navbar-brand {
+  color: $highlight;
+}
+
+.nav-link:hover,
+.navbar-brand:hover {
+  transform: scale(1.1);
+  transition: 0.2s ease;
+  color: white;
+  font-weight: bold;
+}
+
+.download {
+  display: flex;
+  align-items: center;
+  button {
+    padding: 5px 15px;
+    border-radius: 10px;
+    background-color: $highlight;
+    color: white;
+  }
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 225, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: $highlight;
+}
+
+.myName {
+  cursor: pointer;
+}
+
+#hero {
+  padding: 200px 0 250px 0;
+
+  h5 {
+    color: $semi-highlight;
+    font-family: $font-fam-3;
+    padding-bottom: 20px;
+  }
+  h1 {
+    color: $highlight;
+    font-size: $font-size-xxxl;
+    padding-bottom: 20px;
+    font-weight: bold;
+  }
+  h2 {
+    font-size: $font-size-xxl;
+    padding-bottom: 20px;
+    font-weight: bold;
+  }
+  p {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  #hero p {
+    width: 100%;
+  }
+}
+
+.heading {
+  color: lightgray;
+}
+
+#about {
+  padding: 100px 0px 250px 0px;
+  display: grid;
+  grid-template-columns: 70% 1fr;
+  gap: 30px;
+
+  ul {
+    list-style-type: ">  ";
+
+    li {
+      color: $semi-highlight;
+      font-family: $font-fam-3;
+    }
+    li::marker {
+      color: $highlight;
+      font-size: 1.3rem;
+    }
+  }
+}
+
+@media screen and (max-width: 769px) {
+  #about {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+.skillsList {
+  display: grid;
+  grid-template-columns: 50% 1fr;
+}
+
+.myPhoto {
+  padding-top: 90px;
+  align-items: center;
+}
+
+@media screen and (max-width: 769px) {
+  .myPhoto {
+    margin: auto;
+  }
+}
+
+.myPhoto img {
+  height: 225px;
+  border-radius: 5px;
+  box-shadow: $box-shadow3;
+  opacity: 40%;
+}
+
+.myPhoto img:hover {
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+  opacity: 100%;
+}
+
+#experience {
+  padding: 100px 0 250px 0;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: $background-color;
+}
+
+.accordion-button {
+  background-color: $background-color;
+  font-size: $font-size-m;
+}
+
+.accordion-header {
+  font-family: $font-fam-3;
+  color: $highlight;
+}
+
+.accordion-item {
+  border: 1px solid $highlight;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.accordion-body {
+  font-family: $font-fam-3;
+}
+
+.web-developer,
+.software-eng,
+.industrial-eng {
+  background-color: $background-color;
+  strong {
+    color: $highlight;
+  }
+  ul {
+    list-style: "> ";
+    li {
+      color: $semi-highlight;
+    }
+  }
+  li::marker {
+    color: $highlight;
+    font-size: 1.3rem;
+  }
+}
+
+#projects {
+  padding: 100px 0 250px 0;
+}
+
+.projectsMade {
+  padding: 20px 0;
+  img {
+    max-height: 250px;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: $box-shadow2;
+    opacity: 40%;
+  }
+  img:hover {
+    transform: scale(1.05);
+    transition: 0.2s ease;
+    opacity: 100%;
+  }
+}
+
+.projectDescription {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 700px) {
+  .projectImg img {
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .projectImg img {
+    height: 170px;
+    width: auto;
+  }
+}
+
+.petCorner {
+  display: grid;
+  grid-template-areas: "projectImg projectDescription";
+  gap: 30px;
+  padding: 10px 0 50px 0;
+
+  small {
+    border: 0.5px solid $semi-highlight;
+    border-radius: 5px;
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 1175px) {
+  .petCorner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.camareEvents {
+  display: grid;
+  grid-template-areas: "projectDescription projectImg";
+  gap: 30px;
+  padding: 10px 0 50px 0;
+
+  small {
+    border: 0.5px solid $semi-highlight;
+    border-radius: 5px;
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 1175px) {
+  .camareEvents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.calculator {
+  display: grid;
+  grid-template-areas: "projectImg projectDescription";
+  gap: 30px;
+  padding: 10px 0 50px 0;
+
+  small {
+    border: 0.5px solid $semi-highlight;
+    border-radius: 5px;
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 1175px) {
+  .calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.camareCakes {
+  display: grid;
+  grid-template-areas: "projectDescription projectImg";
+  gap: 30px;
+  padding: 10px 0 50px 0;
+
+  small {
+    border: 0.5px solid $semi-highlight;
+    border-radius: 5px;
+    padding: 5px;
+    line-height: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 1175px) {
+  .camareCakes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.contactHead {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin: auto;
+  padding: 0 0 50px 0;
+  width: 70%;
+  h2 {
+    font-size: $font-size-xl;
+    font-weight: bold;
+    padding-bottom: 20px;
+  }
+  h5 {
+    color: $highlight;
+  }
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin: auto;
+  padding: 0 0 250px 0;
+  width: 80%;
+}
+
+#contactForm {
+  margin: 10px 0;
+  input,
+  textarea {
+    background-color: $background-color;
+    border: 0.5px solid $highlight;
+    border-radius: 7px;
+    color: $highlight;
+    font-family: $font-fam-3;
+    margin: 10px 0;
+  }
+
+  label {
+    color: $highlight;
+    font-family: $font-fam-3;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  button {
+    align-self: center;
+  }
+}
+
+.sendBtn {
+  width: 40%;
+  background-color: $background-color;
+  border: 2px solid $highlight;
+  border-radius: 25px;
+  color: $highlight;
+  font-family: $font-fam-3;
+  padding: 5px;
+  align-self: center;
+}
+
+#msgBtn {
+  border-radius: 25px;
+  border: 2px solid $highlight;
+  padding: 10px 15px;
+  font-family: $font-fam-3;
+  background-color: $background-color;
+  color: $highlight;
+}
+
+#msgBtn:hover {
+  font-weight: bold;
+  transform: scale(1.05);
+  transition: ease 0.2s;
+}
+
+#sendBtn:hover {
+  font-weight: bold;
+  transform: scale(1.05);
+  transition: ease 0.2s;
+}
+
+footer {
+  color: $semi-highlight;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin: 20px auto;
+  gap: 20px;
+}
+
+/* .mymail::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 90px;
+  margin: 0px auto;
+  background-color: $semi-highlight;
+}
+
+.mymail {
+  width: 40px;
+  position: fixed;
+  bottom: 0px;
+  left: auto;
+  right: 50px;
+  z-index: 10;
+
+  a {
+    text-decoration: none;
+    color: $semi-highlight;
+    font-family: $font-fam-3;
+    margin: 20px auto;
+    padding: 10px;
+    writing-mode: vertical-rl;
+    letter-spacing: 0.1em;
+  }
+}
+
+.mymail a:hover {
+  color: $highlight;
+} */
